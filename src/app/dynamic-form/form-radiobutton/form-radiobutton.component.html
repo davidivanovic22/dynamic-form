@@ -1,0 +1,8 @@
+<div [formGroup]="group">
+    <mat-radio-group [formControlName]="config.name">
+        <mat-radio-button #radio *ngFor="let option of config.options"
+                          (change)="config.event === 'change' && config.function(radio.value)"
+                          [value]="option | optionPreview: config?.rowValue">
+            {{option  | optionPreview: config?.row}}</mat-radio-button>
+    </mat-radio-group>
+</div>

@@ -1,0 +1,13 @@
+<hello name="{{ name }}"></hello>
+<p>
+    Start editing to see some magic happen :)
+</p>
+
+<newt-dynamic-form
+        [configRow]="config"
+        #form="dynamicForm"
+        (submit)="submit($event)">
+</newt-dynamic-form>
+
+Form valid : {{ form.valid }} <br>
+Form value : {{ form.value | json  }}

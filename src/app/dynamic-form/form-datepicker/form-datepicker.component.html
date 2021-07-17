@@ -1,0 +1,10 @@
+<div [formGroup]="group">
+	<mat-form-field class="mat-form-field-fluid">
+		<input matInput #input  [matDatepicker]="picker" [placeholder]="config.placeholder" [formControlName]="config.name" [readonly]="config.readonly">
+		<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+		<mat-datepicker #picker></mat-datepicker>
+	</mat-form-field>
+	<a href="javascript:;" class="btn-icon" *ngIf="group.controls[config.name].value" (click)="reset($event)">
+		<i class="la la-close "></i>
+	</a>
+</div>

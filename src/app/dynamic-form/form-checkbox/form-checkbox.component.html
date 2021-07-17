@@ -1,0 +1,10 @@
+<div [formGroup]="group" *ngFor="let control of group.controls[config.name].value; let i = index">
+    <mat-label [formArrayName]="config.name">
+        <mat-checkbox #checkbox
+                      [formControlName]="i"
+                      (change)="config.event === 'change' && config.function(checkbox.value)"
+                      [value]="config.options[i] | optionPreview: config.rowValue">
+            {{config.options[i] | optionPreview: config.row}}
+        </mat-checkbox>
+    </mat-label>
+</div>

@@ -1,0 +1,10 @@
+<div [formGroup]="group">
+    <mat-form-field class="mat-form-field-fluid">
+        <input #input matInput
+               [placeholder]="config.placeholder"
+               [formControlName]="config.name"
+               [readonly]="config.readonly"
+               (input)="config.event === 'input' && config.function(input.value)"
+               (change)="config.event === 'change' && config.function(input.value)">
+    </mat-form-field>
+</div>

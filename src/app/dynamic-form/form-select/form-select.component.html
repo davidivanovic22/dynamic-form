@@ -1,0 +1,15 @@
+<div [formGroup]="group">
+    <mat-form-field *ngIf="config.condition" class="mat-form-field-fluid">
+        <mat-select #select [placeholder]="config.placeholder"
+                    [formControlName]="config.name"
+                    [multiple]="config.multiple"
+                    [(value)]="config.selected"
+                    (selectionChange)="config.event === 'selectionChange' && config.function(select.value)"
+                    (valueChange)="config.event === 'valueChange' && config.function(select.value)">
+            <mat-option *ngFor="let option of config.options" [value]="option | optionPreview: config?.rowValue">
+                {{option | optionPreview: config?.row}}</mat-option>
+        </mat-select>
+        <!--<mat-hint align="start">Select-->
+        <!--<strong>{{config.placeholder}}</strong></mat-hint>-->
+    </mat-form-field>
+</div>

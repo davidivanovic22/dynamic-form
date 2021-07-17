@@ -1,0 +1,19 @@
+<!-- start::FILTERS & GROUP ACTIONS -->
+<div class="">
+	<!-- start::FILTERS -->
+	<div class="form__filtration">
+		<form class="form"
+			  [formGroup]="form"
+			  (submit)="handleSubmit($event)">
+			<div class="row align-items-center" *ngFor="let row of configRow;" >
+				<ng-container
+					newtDynamicField
+					*ngFor="let field of row;"
+					[config]="field"
+					[class]="field.containerClass"
+					[group]="form">
+				</ng-container>
+			</div>
+		</form>
+	</div>
+</div>
