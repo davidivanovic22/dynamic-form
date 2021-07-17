@@ -1,5 +1,38 @@
 <div [formGroup]="group">
-	<button mat-flat-button color="accent" [disabled]="config.disabled" type="submit">
-		{{ config.label }}
-	</button>
+    <span *ngFor="let button of config.buttons">
+    <button mat-flat-button [color]="config.color" [class]="button.class" *ngIf="button.buttonType === 'flat'" [disabled]="config.disabled"
+            type="submit">
+        {{ button?.label}}
+    </button>
+        </span>
+    <span *ngFor="let button of config.buttons">
+    <button mat-stroked-button [color]="config.color" [class]="button.class" *ngIf="button.buttonType === 'stroked'"
+            [disabled]="config.disabled" type="submit">
+        {{ button?.label}}
+    </button>
+        </span>
+    <span *ngFor="let button of config.buttons">
+    <button mat-icon-button [color]="config.color" [class]="button.class" *ngIf="button.buttonType === 'icon'" [disabled]="config.disabled"
+            type="submit">
+        {{ button?.label}}
+    </button>
+        </span>
+    <span *ngFor="let button of config.buttons">
+    <button mat-raised-button [color]="config.color" [class]="button.class" *ngIf="button.buttonType === 'raised'" [disabled]="config.disabled"
+            type="submit">
+        {{ button?.label}}
+    </button>
+        </span>
+    <span *ngFor="let button of config.buttons">
+    <button mat-fab [color]="config.color" [class]="button.class" *ngIf="button.buttonType === 'fab'" [disabled]="config.disabled"
+            type="submit">
+        {{ button?.label}}
+    </button>
+        </span>
+    <span *ngFor="let button of config.buttons">
+    <button mat-mini-fab [color]="config.color" [class]="button.class" *ngIf="button.buttonType === 'mini-fab'" [disabled]="config.disabled"
+            type="submit">
+        {{ button?.label}}
+    </button>
+        </span>
 </div>

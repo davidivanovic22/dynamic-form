@@ -13,7 +13,6 @@ import {FormGroup} from '@angular/forms';
 import {FormButtonComponent} from '../dynamic-form/form-button/form-button.component';
 import {FormInputComponent} from '../dynamic-form/form-input/form-input.component';
 import {FormSelectComponent} from '../dynamic-form/form-select/form-select.component';
-import {FormSelectSearchComponent} from '../dynamic-form/form-select-search/form-select-search.component';
 import {FormCheckboxComponent} from '../dynamic-form/form-checkbox/form-checkbox.component';
 import {Field} from '../interfaces/field.interface';
 import {FieldConfig} from '../interfaces/field-config.interface';
@@ -24,7 +23,6 @@ import {FormRadiobuttonComponent} from "../dynamic-form/form-radiobutton/form-ra
 const components = {
 	button: FormButtonComponent,
 	input: FormInputComponent,
-	selectSearch: FormSelectSearchComponent,
 	select: FormSelectComponent,
 	datepicker: FormDatepickerComponent,
 	checkbox: FormCheckboxComponent,

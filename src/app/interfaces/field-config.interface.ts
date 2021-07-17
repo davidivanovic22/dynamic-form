@@ -19,4 +19,6 @@ export interface FieldConfig {
   event: string;
   function: any;
   formOption: string;
+  color: any;
+  buttons: any[];
 }

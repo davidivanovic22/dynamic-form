@@ -12,7 +12,7 @@ export class DynamicFormComponent implements OnInit, OnChanges {
     @Input()
     configRow: any = [];
     config: FieldConfig[] = [];
-
+    options: any[];
     @Output()
     submit: EventEmitter<any> = new EventEmitter<any>();
 
@@ -72,7 +72,6 @@ export class DynamicFormComponent implements OnInit, OnChanges {
                 group.addControl(control.name, this.createControl(control))
             }
         });
-        console.log(group)
         return group;
     }
 
@@ -85,7 +84,6 @@ export class DynamicFormComponent implements OnInit, OnChanges {
         const {validation, options} = config;
         return this.fb.array(options, validation);
     }
-
 
     handleSubmit(event: Event) {
         event.preventDefault();

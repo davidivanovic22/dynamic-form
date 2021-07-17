@@ -1,6 +1,7 @@
 <div [formGroup]="group">
     <mat-form-field class="mat-form-field-fluid">
-        <input #input matInput
+        <input matInput
+               #input
                [placeholder]="config.placeholder"
                [formControlName]="config.name"
                [readonly]="config.readonly"

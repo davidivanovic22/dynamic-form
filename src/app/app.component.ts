@@ -1,6 +1,7 @@
 import {Component, ViewChild, OnInit} from '@angular/core';
 import {Validators} from '@angular/forms';
 import {DynamicFormComponent} from './dynamic-form/dynamic-form.component';
+import {Theme} from "jasmine-spec-reporter/built/theme";
 
 @Component({
     selector: 'newt-app',
@@ -97,8 +98,25 @@ export class AppComponent implements OnInit {
                 },
                 {
                     type: 'button',
-                    label: 'SEARCH',
                     name: 'submit',
+                    buttons:
+                        [
+                            {
+                                buttonType: "raised",
+                                label: "Next",
+                                event: "click",
+                                function: this.print,
+                                class: "button-margin-left"
+                            },
+                            {
+                                buttonType: "stroked",
+                                label: "Back",
+                                event: "click",
+                                function: this.print,
+                                class: "button-margin-left"
+                            }
+                        ],
+                    color: "primary",
                     containerClass: 'col-md-12'
                 }
             ]
