@@ -11,9 +11,4 @@ export class FormCheckboxComponent {
   config: FieldConfig;
   group: FormGroup;
   class: string;
-
-  is(data){
-    console.log(data, "Ovdeeee")
-  }
-
 }
